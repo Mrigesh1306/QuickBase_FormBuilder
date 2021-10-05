@@ -66,7 +66,7 @@ class ChoiceComp extends Component {
                             this.updatedChoice = this.state.title;
                             console.log(this.updatedChoice);
                             this.displayResult();
-                        }}>update</button>
+                        }}>Update</button>
                     </div>
 
                 }
@@ -82,7 +82,7 @@ class ChoiceComp extends Component {
                                               })
                             };
                             this.displayResult();
-                        }}>done</button>
+                        }}>Done</button>
                     </div>
                 }
 

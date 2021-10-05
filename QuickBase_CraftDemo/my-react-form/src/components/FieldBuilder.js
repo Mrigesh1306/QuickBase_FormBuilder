@@ -75,9 +75,9 @@ class FieldBuilder extends Component {
     }
 
     deleteChoice = (index) => {
-        const first_part_list = this.state.choices.slice(0, index);
-        const second_part_list = this.state.choices.slice(index + 1);
-        let newChoicesArray = [...first_part_list, ...second_part_list];
+        const x = this.state.choices.slice(0, index);
+        const y = this.state.choices.slice(index + 1);
+        let newChoicesArray = [...x, ...y];
         this.setState({
             choices: newChoicesArray
         })
@@ -106,13 +106,13 @@ class FieldBuilder extends Component {
 
     orderingChangeHandler = (event) => {
         if (this.state.ordering === "alphabetical") {
-            this.state.choices.sort((choice1, choice2) => {
-                var choice1Title = choice1.title.toUpperCase(); 
-                var choice2Title = choice2.title.toUpperCase(); 
-                if (choice1Title < choice2Title) {
+            this.state.choices.sort((c1, c2) => {
+                var c1Title = c1.title.toUpperCase(); 
+                var c2Title = c2.title.toUpperCase(); 
+                if (c1Title < c2Title) {
                     return 1;
                 }
-                if (choice1 > choice2Title) {
+                if (c1 > c2Title) {
                     return -1;
                 }
                 return 0;
@@ -120,13 +120,13 @@ class FieldBuilder extends Component {
         }
 
         if (this.state.ordering === "nonAlphabetical") {
-            this.state.choices.sort((choice1, choice2) => {
-                var choice1Title = choice1.title.toUpperCase(); 
-                var choice2Title = choice2.title.toUpperCase(); 
-                if (choice1Title < choice2Title) {
+            this.state.choices.sort((c1, c2) => {
+                var c1Title = c1.title.toUpperCase(); 
+                var c2Title = c2.title.toUpperCase(); 
+                if (c1Title < c2Title) {
                     return -1;
                 }
-                if (choice1 > choice2Title) {
+                if (c1 > c2Title) {
                     return 1;
                 }
                 return 0;
